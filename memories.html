@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memories 💜</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="motifs" aria-hidden="true">
+    <span class="sticker s1">🥭</span>
+    <span class="sticker s2">🥭</span>
+    <span class="sticker s3">🥭</span>
+    <span class="sticker s4">🦃</span>
+    <span class="sticker s5">🪿</span>
+    <span class="sticker s6">🥭</span>
+    <span class="sticker s7">🥭</span>
+    <span class="sticker s8">🪿</span>
+    <span class="sticker s9">🥭</span>
+    <span class="sticker s10">🥭</span>
+  </div>
+
+  <main class="card">
+    <a class="backlink" href="index.html">← back</a>
+
+    <h1>Our little memories 💜</h1>
+    <p class="subtitle">Click a card to open it.</p>
+
+    <section class="memories">
+      <div class="memory-grid">
+        <button class="memory-card" data-title="Moment 1" data-img="assets/moment1.jpg" data-text="Write the longer version of Moment 1 here.">
+          <span class="emoji">🥭</span>
+          <div>
+            <div class="memory-title">Moment 1</div>
+            <div class="memory-preview">[short teaser — click me]</div>
+          </div>
+        </button>
+
+        <button class="memory-card" data-title="Moment 2" data-img="assets/moment2.jpg" data-text="Write the longer version of Moment 2 here.">
+          <span class="emoji">🥭</span>
+          <div>
+            <div class="memory-title">Moment 2</div>
+            <div class="memory-preview">[short teaser — click me]</div>
+          </div>
+        </button>
+
+        <button class="memory-card" data-title="Moment 3" data-img="assets/moment3.jpg" data-text="Write the longer version of Moment 3 here.">
+          <span class="emoji">🦃</span>
+          <div>
+            <div class="memory-title">Moment 3</div>
+            <div class="memory-preview">[short teaser — click me]</div>
+          </div>
+        </button>
+
+        <button class="memory-card" data-title="Moment 4" data-img="assets/moment4.jpg" data-text="Write the longer version of Moment 4 here.">
+          <span class="emoji">🪿</span>
+          <div>
+            <div class="memory-title">Moment 4</div>
+            <div class="memory-preview">[short teaser — click me]</div>
+          </div>
+        </button>
+
+        <button class="memory-card" data-title="Moment 5" data-img="assets/moment5.jpg" data-text="Write the longer version of Moment 5 here.">
+          <span class="emoji">🥭</span>
+          <div>
+            <div class="memory-title">Moment 5</div>
+            <div class="memory-preview">[short teaser — click me]</div>
+          </div>
+        </button>
+      </div>
+    </section>
+
+    <footer>OK now go demand a Valentine hug 💜</footer>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+      <h3 id="modalTitle">Moment</h3>
+      <img id="modalImg" src="" alt="" />
+      <p id="modalText"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
