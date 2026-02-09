@@ -1,41 +1,28 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2113.2">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Apple Color Emoji'; color: #000000; -webkit-text-stroke: #000000}
-    p.p3 {margin: 0.0px 0.0px 12.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
-    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
-    li.li5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
-    span.s1 {font-kerning: none}
-    span.s2 {font: 12.0px Times; font-kerning: none}
-    span.s3 {font: 24.0px 'Apple Color Emoji'; font-kerning: none}
-    span.s4 {font: 12.0px 'Apple Color Emoji'; font-kerning: none}
-    span.s5 {-webkit-text-stroke: 0px #000000}
-    ol.ol1 {list-style-type: decimal}
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Valentine’s Day 💜</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-<p class="p1"><span class="s1">🥭</span><span class="s2"> </span><span class="s1">🦃</span><span class="s2"> </span><span class="s1">🪿</span><span class="s2"> </span><span class="s1">🥭</span><span class="s2"> </span><span class="s1">🦃</span><span class="s2"> </span><span class="s1">🪿</span><span class="s2"><span class="Apple-converted-space"> </span></span></p>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Happy Valentine’s Day, Love </b></span><span class="s3">💜</span></h1>
-<p class="p3"><span class="s1">A tiny website for my favorite person.</span></p>
-<p class="p3"><span class="s1">Hover (or tap) to reveal a secret…</span></p>
-<p class="p3"><span class="s1">You’re my best day, every day. I’m obsessed with you. </span><span class="s4">🥭🦃</span><span class="s1">🪿<span class="Apple-converted-space"> </span></span></p>
-<p class="p3"><span class="s1">Tip: tap the box on mobile </span><span class="s4">💜</span></p>
-<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>5 little moments I love about you</b></span></h2>
-<ol class="ol1">
-  <li class="li5"><span class="s5"><b></b></span><span class="s1"><b>Moment 1:</b> [Write something specific]</span></li>
-  <li class="li5"><span class="s5"><b></b></span><span class="s1"><b>Moment 2:</b> [Write something specific]</span></li>
-  <li class="li5"><span class="s5"><b></b></span><span class="s1"><b>Moment 3:</b> [Write something specific]</span></li>
-  <li class="li5"><span class="s5"><b></b></span><span class="s1"><b>Moment 4:</b> [Write something specific]</span></li>
-  <li class="li5"><span class="s5"><b></b></span><span class="s1"><b>Moment 5:</b> [Write something specific]</span></li>
-</ol>
-<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; color: #000000; -webkit-text-stroke: #000000"><span class="s1"><b>Our playlist</b></span></h2>
-<p class="p3"><span class="s1">Replace the embed link with your Spotify playlist.</span></p>
-<p class="p5"><span class="s1">Made with love </span><span class="s4">💜</span><span class="s1"> (and mango + turkey + Skåne goose energy)<span class="Apple-converted-space"> </span></span></p>
-</body>
-</html>
+  <!-- Floating motifs -->
+  <div class="motifs" aria-hidden="true">
+    <span class="sticker s1">🥭</span>
+    <span class="sticker s2">🦃</span>
+    <span class="sticker s3">🪿</span>
+    <span class="sticker s4">🥭</span>
+    <span class="sticker s5">🦃</span>
+    <span class="sticker s6">🪿</span>
+  </div>
+
+  <main class="card">
+    <h1>Happy Valentine’s Day, <span id="name">Love</span> 💜</h1>
+    <p class="subtitle">A tiny website for my favorite person.</p>
+
+    <!-- Hidden message reveal -->
+    <section class="secret">
+      <div class="secret-box" id="secretBox" tabindex="0" role="button" aria-pressed="false">
+        <p clas
