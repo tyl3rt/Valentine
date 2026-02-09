@@ -1,30 +1,62 @@
-// Personalize here
-const HER_NAME = "Her Name"; // <-- change this
-
-const MOMENTS = [
-  "The first time you ___ and I couldn’t stop smiling.",
-  "When we ___ and it felt like our own little world.",
-  "Your laugh when ___ (I replay it in my head).",
-  "That time you ___ and I thought: wow, I adore you.",
-  "Every ordinary moment that becomes magic because it’s with you."
-];
-
-document.getElementById("name").textContent = HER_NAME;
-document.getElementById("m1").textContent = MOMENTS[0];
-document.getElementById("m2").textContent = MOMENTS[1];
-document.getElementById("m3").textContent = MOMENTS[2];
-document.getElementById("m4").textContent = MOMENTS[3];
-document.getElementById("m5").textContent = MOMENTS[4];
-
-// Tap-to-reveal for mobile (also works with keyboard focus)
+// SECRET REVEAL (index.html)
 const secretBox = document.getElementById("secretBox");
-secretBox.addEventListener("click", () => {
-  secretBox.classList.toggle("revealed");
-  secretBox.setAttribute("aria-pressed", secretBox.classList.contains("revealed"));
-});
-secretBox.addEventListener("keydown", (e) => {
-  if (e.key === "Enter" || e.key === " ") {
-    e.preventDefault();
-    secretBox.click();
-  }
-});
+if (secretBox) {
+  secretBox.addEventListener("click", () => {
+    secretBox.classList.toggle("revealed");
+    secretBox.setAttribute("aria-pressed", secretBox.classList.contains("revealed"));
+  });
+
+  secretBox.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      secretBox.click();
+    }
+  });
+}
+
+// MEMORY MODAL (memories.html)
+const modal = document.getElementById("modal");
+const modalTitle = document.getElementById("modalTitle");
+const modalImg = document.getElementById("modalImg");
+const modalText = document.getElementById("modalText");
+const modalClose = document.getElementById("modalClose");
+const modalBackdrop = document.getElementById("modalBackdrop");
+
+function openModal({ title, img, text }) {
+  modalTitle.textContent = title;
+  modalImg.src = img;
+  modalImg.alt = title;
+  modalText.textContent = text;
+
+  modal.classList.add("open");
+  modal.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+}
+
+function closeModal() {
+  if (!modal) return;
+  modal.classList.remove("open");
+  modal.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
+}
+
+const memoryCards = document.querySelectorAll(".memory-card");
+if (memoryCards.length && modal) {
+  memoryCards.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      openModal({
+        title: btn.dataset.title,
+        img: btn.dataset.img,
+        text: btn.dataset.text,
+      });
+    });
+  });
+
+  if (modalClose) modalClose.addEventListener("click", closeModal);
+  if (modalBackdrop) modalBackdrop.addEventListener("click", closeModal);
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeModal();
+  });
+}
+
